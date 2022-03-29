@@ -4,13 +4,18 @@ import Form from "../../components/Form/form.component";
 import ExerciseList from "../../components/ExerciseList/exercise-list.component";
 
 const WorkoutPage = () => {
-    const[inputText, setInputText] = useState("");
-    const [todos, setTodos] = useState([])
+  const [inputText, setInputText] = useState("");
+  const [todos, setTodos] = useState([]);
   return (
     <div>
       <Header title="Workout" />
-      <Form todos={todos} setTodos={setTodos}setInputText={setInputText} inputText={inputText}/>
-      <ExerciseList todos={todos} />
+      <Form
+        todos={todos}
+        setTodos={setTodos}
+        setInputText={setInputText}
+        inputText={inputText}
+      />
+      <ExerciseList setTodos={setTodos} todos={todos} />
     </div>
   );
 };
