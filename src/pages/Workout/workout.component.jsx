@@ -8,7 +8,7 @@ const WorkoutPage = () => {
   const [todos, setTodos] = useState([]);
   return (
     <div>
-      <Header title="Workout" />
+      <Header title="Create Workout" />
       <Form
         todos={todos}
         setTodos={setTodos}

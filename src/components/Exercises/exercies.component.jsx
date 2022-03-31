@@ -1,50 +1,34 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const Exercise = ({ text, todo, todos, setTodos }) => {
   const deleteHandler = () => {
     setTodos(todos.filter((el) => el.id !== todo.id));
   };
-  const completeHandler = () => {
-    setTodos(
-      todos.map((el) => {
-        if (el.id === todo.id) {
-          return {
-            ...el,
-            completed: !el.completed,
-          };
-        }
-        return el;
-      })
-    );
-  };
 
-  const [inputNumber, setInputNumber] = useState("")
+  const [inputNumber, setInputNumber] = useState("");
   const inputNumberHandler = (e) => {
-    setInputNumber(e.target.value)
+    setInputNumber(e.target.value);
   };
   const submitNumberHandler = (e) => {
-    if (e.key === 'Enter') {
-      console.log(inputNumber)
+    if (e.key === "Enter") {
+      console.log(inputNumber);
     }
-  }
-  const [inputRep, setInputRep] = useState("")
-  const inputRepHandler = (e) => {
-    setInputRep(e.target.value)
   };
+  const [inputRep, setInputRep] = useState("");
+  const inputRepHandler = (e) => {
+    setInputRep(e.target.value);
+  };
+
   const submitRepHandler = (e) => {
-    if (e.key === 'Enter') {
-      console.log(inputRep)
+    if (e.key === "Enter") {
+      console.log(inputRep);
     }
-  }
+  };
   return (
     <div className="exercise">
-      <li className={`exercise-item ${todo.completed ? "completed" : ''}`}>{text}</li>
-      <button onClick={completeHandler} className="complete-btn">
-        <i className="fas fa-check"></i>
-      </button>
-      <button onClick={deleteHandler} className="trash-btn">
-        <i className="fas fa-trash"></i>
-      </button>
+      <li className={`exercise-item ${todo.completed ? "completed" : ""}`}>
+        {text}
+      </li>
       <input
         value={inputNumber}
         onChange={inputNumberHandler}
@@ -61,7 +45,9 @@ const Exercise = ({ text, todo, todos, setTodos }) => {
         onKeyDown={submitRepHandler}
         placeholder="Reps"
       />
-    
+          <button onClick={deleteHandler} className="trash-btn">
+        <i className="fas fa-trash"></i>
+      </button>
     </div>
   );
 };
