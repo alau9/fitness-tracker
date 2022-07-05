@@ -1,0 +1,35 @@
+.exercise-log{
+    display: flex;
+    flex-direction: row;
+    margin-left: 2rem;
+    margin-top: 2rem;
+
+    .exercise{
+        width: 5rem;
+        height: 2rem;
+    }
+
+    .submit-button{
+        all: unset;
+        margin-left:1rem ;
+        cursor: pointer;
+        color: rgb(21, 224, 21);
+
+    }
+
+    .error-message{
+        color: red;
+        margin-left: 1rem;
+        margin-top: -1rem;
+    }
+
+    input {
+        width: 2.5rem;
+        margin-left: 1rem;
+    }
+
+    select{
+        width: 3rem;
+        margin-left: 1rem;
+    }
+}

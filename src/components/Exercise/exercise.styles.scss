@@ -1,0 +1,21 @@
+.exercise{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+
+    .exercise-item{
+        margin-top: .5rem;
+        margin-left: 1rem;
+    }
+    
+    .trash-btn{
+        all: unset;
+        margin-left: 1rem;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        cursor: pointer;
+        color: red;
+    }
+}
+

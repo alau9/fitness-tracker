@@ -1,0 +1,14 @@
+.workoutlist-page{
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    
+    .create-workout{
+        margin-left: 2rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: rgb(21, 224, 21);
+        font-weight: 600;
+        margin-top: 2rem;
+    }
+}

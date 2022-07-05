@@ -1,0 +1,31 @@
+.form {
+  margin-left: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  .exercise-input {
+    margin-top: 1rem;
+    width: 5rem;
+    height: 2rem;
+  }
+
+  .add {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+
+    .add-text {
+      margin-right: 1rem;
+      margin-top: 1rem;
+      color: rgb(21, 224, 21);
+    }
+
+    .add-button {
+      all: unset;
+      width: 3rem;
+      margin-top: 1rem;
+      color: rgb(21, 224, 21);
+    }
+  }
+}

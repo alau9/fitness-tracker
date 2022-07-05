@@ -1,21 +1,24 @@
-import React from "react";
-import Exercise from "../Exercises/exercies.component";
+import {useContext} from "react";
+import { WorkoutListContext } from "../../contexts/workout-list.context";
+import Exercise from "../Exercise/exercise.component";
 
-const ExerciseList = ({ todos, setTodos }) => {
-  console.log(todos);
+
+const ExerciseList = () => {
+  const { workoutList } = useContext(WorkoutListContext);
+  
   return (
     <div className="list-container">
-      <ul className="exercise-list">
-        {todos.map((todo) => (
+      <div className="exercise-list">
+        {workoutList.map((workout) => (
           <Exercise
-            setTodos={setTodos}
-            todos={todos}
-            key={todo.id}
-            todo={todo}
-            text={todo.text}
+           name={workout.name}
+           rep={workout.reps}
+           set={workout.sets}
+           id={workout.id}
           />
+     
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

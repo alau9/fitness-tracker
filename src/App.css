@@ -1,0 +1,13 @@
+*{
+    font-family: 'Inconsolata', monospace;
+  }
+  
+  
+  a:-webkit-any-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .page{
+    min-height: 90vh;
+  }

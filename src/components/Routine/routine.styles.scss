@@ -1,0 +1,17 @@
+.routine{
+    display: flex;
+    flex-direction: row;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+
+    .workout-name{
+        cursor: pointer;
+    }
+    .delete-button{
+        all: unset;
+        color: red;
+        cursor: pointer;
+        margin-left: 2rem;
+    }
+}
