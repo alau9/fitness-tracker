@@ -48,7 +48,7 @@ const WorkoutListPage = ({ user: loggedInUser }) => {
         </div>
         <div
           onClick={() => {
-            console.log(session);
+            navigate("/history")
           }}
         >
           console

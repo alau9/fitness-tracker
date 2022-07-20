@@ -1,11 +1,8 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { WorkoutListContext } from "../../contexts/workout-list.context";
 import { useNavigate } from "react-router-dom";
 import "./routine.styles.scss";
 import FirebaseContext from "../../contexts/firebase";
-import LoggedInUserContext from "../../contexts/logged-in-user";
-import useUser from "../../hooks/use-user";
-import { useCollectionData} from "react-firebase-hooks/firestore"
 
 const Routine = ({ name, id, user }) => {
 

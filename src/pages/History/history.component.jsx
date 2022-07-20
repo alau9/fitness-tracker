@@ -2,6 +2,7 @@ import FirebaseContext from "../../contexts/firebase";
 import Calendar from "../../components/Calendar/calendar.component"
 import useUser from "../../hooks/use-user";
 import { useNavigate } from "react-router-dom";
+import Header from "../../components/header/header.component";
 
 const History = ({ user: loggedInUser }) => {
   const navigate = useNavigate();
@@ -9,7 +10,8 @@ const History = ({ user: loggedInUser }) => {
 
   return (
     <div>
-      <Calendar />
+      <Header  />
+      <Calendar user={ loggedInUser}/>
     {/* Calendar  where you can select date to see that date's logs, while viewing logs can go into each exercise to see prgoress made */}
 
     </div>

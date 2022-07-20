@@ -48,7 +48,7 @@
     text-align: center;
     text-transform: uppercase;
     color: var(--black);
-    font-weight: 400;
+    font-weight: 700;
   }
 
   .week div {
@@ -66,14 +66,20 @@
     box-sizing: border-box;
     z-index: 1;
     text-align: center;
-    font-weight: 700;
+    font-weight: 400;
     cursor: pointer;
 
     .selected {
       background-color: rgb(198, 91, 91);
       color: rgb(36, 34, 34);
-      font-weight: bold;
+ 
     }
+
+    .workout{
+      color: black;
+      font-weight: 800;
+    }
+
     .today {
       background-color: grey;
     }
