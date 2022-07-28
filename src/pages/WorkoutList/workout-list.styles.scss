@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: top;
+    min-height: 90vh;
     
-    .create-workout{
+    .create{
         margin-left: 2rem;
         font-size: 1.5rem;
         cursor: pointer;

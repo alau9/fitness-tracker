@@ -30,10 +30,10 @@ const WorkoutRoutine = ({ user: loggedInUser }) => {
   }, [currentRoutine, session, name]);
 
   return (
-    <div>
+    <div className="workout-routine">
       <Header title={capitalize(name)} />
       <div className="exercise-list">
-        {currentRoutine.workoutList.map((workout) => (
+        {currentRoutine?.workoutList.map((workout) => (
           <ExerciseLog
             name={workout.name}
             rep={workout.reps}
@@ -48,7 +48,7 @@ const WorkoutRoutine = ({ user: loggedInUser }) => {
       </div>
       <div></div>
       
-      {tempArray.length >= 1 &&
+      {tempArray.length > 0 &&
         tempArray.map((el) => (
           <div className="temp-log">
             <div className="name">{(el.name).toUpperCase()}</div>
@@ -57,7 +57,6 @@ const WorkoutRoutine = ({ user: loggedInUser }) => {
             <div className="rep">WEIGHT:{el.weight} LBS</div>
           </div>
         ))}
-      <div onClick={() => console.log(tempArray)}>console</div>
       <div className="finish-workout" onClick={() => navigate("/")}>
         Finish Workout
       </div>

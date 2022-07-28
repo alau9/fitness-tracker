@@ -46,6 +46,13 @@ const Calendar = ({ user: loggedInUser }) => {
     }
   };
 
+  const capitalize = (str) => {
+    let first = str.charAt(0);
+    let upper = first.toUpperCase();
+    let remain = str.slice(1);
+    return upper + remain;
+  };
+
   const filterRoutineLog = (day, routines) => {
     return routines?.filter((routine) => day.isSame(routine.date, "day"));
   };
@@ -74,7 +81,7 @@ const Calendar = ({ user: loggedInUser }) => {
         ))}
       </div>
       <div>{filterRoutineLog(value, routine)?.map((day) => (
-        <div>name:{day.name} reps:{day.rep} set:{day.set} weight:{day.weight}</div>
+        <div>{capitalize(day.name)} Reps:{day.rep} Set:{day.set} Weight:{day.weight}</div>
       ))}</div>
     </div>
   );

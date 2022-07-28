@@ -19,6 +19,7 @@ const ExerciseList = () => {
      
         ))}
       </div>
+    
     </div>
   );
 };

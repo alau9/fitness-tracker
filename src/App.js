@@ -10,6 +10,7 @@ import Login from "./pages/Login/login.component";
 import SignUp from "./pages/Signup/signup.component";
 import useAuthListener from "./hooks/use-auth-listener"
 import ProtectedRoute from './helpers/protected-route';
+import Footer from "./components/Footer/footer.component"
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route exact path="/signup" element={<SignUp/>}></Route>
           <Route exact path="/history" element={<History  user={user}/>}></Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </WorkoutListProvider>
   );

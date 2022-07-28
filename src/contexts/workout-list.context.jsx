@@ -127,7 +127,7 @@ let Legs = {
 };
 
 //workoutlist context
-export const WorkoutListContext = createContext();
+export const WorkoutListContext = createContext([]);
 
 //UserContext
 export  const UserContext = createContext(null);

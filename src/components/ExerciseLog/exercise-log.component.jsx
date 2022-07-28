@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
-import { WorkoutListContext } from "../../contexts/workout-list.context";
-import { useNavigate } from "react-router-dom";
+
 import "./exercise-log.styles.scss";
 import FirebaseContext from "../../contexts/firebase";
 
@@ -8,7 +7,6 @@ const ExerciseLog = ({
   name,
   rep,
   set,
-  routineLog,
   setRoutineLog,
   user,
   setTempArray

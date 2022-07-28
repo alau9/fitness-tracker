@@ -59,14 +59,11 @@ const CreateWorkoutPage = ({ user: loggedInUser }) => {
       <Form />
       <ExerciseList />
       <div className="done" onClick={createRoutine}>
-        Done
+        Create
       </div>
       <div className="home" onClick={() => navigate("/")}>
         Home
       </div>
-      <div onClick={() => {
-            console.log(routine);
-          }}>console</div>
     </div>
   );
 };

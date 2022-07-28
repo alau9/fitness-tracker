@@ -42,16 +42,9 @@ const WorkoutListPage = ({ user: loggedInUser }) => {
         </div>
         <div
           onClick={() => navigate("/createworkout")}
-          className="create-workout"
+          className="create"
         >
           CREATE WORKOUT
-        </div>
-        <div
-          onClick={() => {
-            navigate("/history")
-          }}
-        >
-          console
         </div>
       </div>
     </LoggedInUserContext.Provider>

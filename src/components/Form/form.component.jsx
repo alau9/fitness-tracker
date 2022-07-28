@@ -4,10 +4,12 @@ import "./form.styles.scss";
 
 const Form = () => {
   const { addToWorkoutList } = useContext(WorkoutListContext);
-  const { workoutList } = useContext(WorkoutListContext);
+
   const [inputText, setInputText] = useState("");
   const [inputReps, setInputReps] = useState();
   const [inputSets, setInputSets] = useState();
+
+  const [error, setError] = useState("");
 
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
@@ -22,10 +24,17 @@ const Form = () => {
   };
   const submitWorkoutListHandler = (e) => {
     e.preventDefault();
-    addToWorkoutList(inputText, inputReps, inputSets, Math.random() * 1000);
-    setInputText("");
-    setInputReps("");
-    setInputSets("");
+    if (inputText === "" || inputReps === "" || inputSets === "") {
+      setError("Please fill out all fileds")
+    }
+    else {
+      setError("")
+      addToWorkoutList(inputText, inputReps, inputSets, Math.random() * 1000);
+      setInputText("");
+      setInputReps("");
+      setInputSets("");
+    }
+
   };
   return (
     <form className="form">
@@ -63,6 +72,7 @@ const Form = () => {
           <i className="fas fa-plus-square"></i>
         </button>
       </div>
+      {error && <p className="error-message">Please fill in all fields</p>}
     </form>
   );
 };

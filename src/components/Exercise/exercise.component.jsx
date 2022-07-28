@@ -4,12 +4,11 @@ import "./exercise.styles.scss";
 
 const Exercise = ({ name, rep, set, id }) => {
   const { deleteFromWorkoutList } = useContext(WorkoutListContext);
-  const { Workoutlist } = useContext(WorkoutListContext);
+
 
   const deleteHandler = (e) => {
     e.preventDefault();
     deleteFromWorkoutList(id);
-    console.log(Workoutlist);
   };
 
   return (
